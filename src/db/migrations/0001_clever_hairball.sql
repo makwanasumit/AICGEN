@@ -1,0 +1,1 @@
+ALTER TABLE "aiOutput" ALTER COLUMN "formData" SET DATA TYPE varchar;
