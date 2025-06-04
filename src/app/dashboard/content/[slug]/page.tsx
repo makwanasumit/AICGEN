@@ -1,22 +1,20 @@
 "use client";
 
+import { TotalUsageContext } from "@/app/(contenxt)/TotalUsageContext";
+import { UserSubscriptionContext } from "@/app/(contenxt)/UserSubscription";
 import { data } from "@/app/(data)/Templates";
 import { SaveToDb } from "@/app/actions/saveToDb";
 import { Button } from "@/components/ui/button";
 import { useUser } from "@clerk/nextjs";
 import { GoogleGenAI } from "@google/genai";
-import { ArrowLeft, Cross, Crosshair, CrossIcon, FolderClosed, X } from "lucide-react";
+import { ArrowLeft, X } from "lucide-react";
 import Link from "next/link";
 import { redirect, useParams } from "next/navigation";
 import { useContext, useMemo, useState } from "react";
 import { TEMPLATE } from "../../_components/TemplateListSection";
 import FormSection from "./_components/FormSection";
 import OutputSection from "./_components/OutputSection";
-import { TotalUsageContext } from "@/app/(contenxt)/TotalUsageContext";
-import { AlertDialog, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogTitle, AlertDialogTrigger } from "@radix-ui/react-alert-dialog";
-import { AlertDialogFooter, AlertDialogHeader } from "@/components/ui/alert-dialog";
 import UsageTrack from "./_components/UsageTrack";
-import { UserSubscriptionContext } from "@/app/(contenxt)/UserSubscription";
 
 export default function CreateNewContent() {
     const params = useParams();

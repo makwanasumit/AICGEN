@@ -96,7 +96,7 @@ export default function PricingSection() {
             },
         }
 
-        // @ts-expect-error
+        // @ts-expect-error: Razorpay is a global script and not typed
         const rzp = new window.Razorpay(options)
         rzp.open()
     }

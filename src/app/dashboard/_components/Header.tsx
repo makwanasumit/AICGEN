@@ -1,4 +1,4 @@
-import { useClerk, UserButton, useUser } from '@clerk/nextjs';
+import { UserButton } from '@clerk/nextjs';
 import { Search } from 'lucide-react';
 
 function Header() { 
